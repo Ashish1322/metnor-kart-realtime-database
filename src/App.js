@@ -42,14 +42,17 @@ function App() {
 
   return (
     <div className="App">
-        <Login login = {login}  />
-        <Signup signup= {signup} />
+        
 
         {
           isLoggedIn ? 
           <div>
             <Home logout={logout} />
-           </div>  : null
+           </div>  : 
+           <div>
+            <Login login = {login}  />
+            <Signup signup= {signup} />
+           </div>
         }
     </div>
   );
